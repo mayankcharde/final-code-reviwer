@@ -1,0 +1,97 @@
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-in-out, pulse 2s infinite;
+    background: linear-gradient(90deg, #0cdf60, #bbe70b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .home-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: slideInFromRight 1s ease-in-out, fadeIn 2s ease-in-out 1s;
+    background: linear-gradient(90deg, #e7e7e7, #ea0bbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .home-content button {
+    background: linear-gradient(90deg, #00ffcc, #ff00cc);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1s ease-in-out 2s;
+    text-shadow: 0 0 10px rgba(236, 14, 14, 0.5);
+  }
+  
+  .home-content button:hover {
+    background: linear-gradient(90deg, #b382a9, #00ffcc);
+    transform: scale(1.1);
+    border-color: #00ffcc;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 255, 204, 0.5), 0 0 30px rgba(255, 0, 204, 0.5);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
