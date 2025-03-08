@@ -14,9 +14,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/api/users', userRoutes);
-app.use('/api/contacts', contactRoutes);
-app.use('/ai', aiRoutes)
+app.use('/api', userRoutes);
+app.use('/api', contactRoutes);
+app.use('/ai', aiRoutes);
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))

@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/contacts/contact', formData);
+      const response = await axios.post('https://final-code-reviwer-dzfc.onrender.com/api/contact', formData);
       alert(response.data.message);
     } catch (error) {
       alert(error.response?.data?.error || 'An error occurred');
